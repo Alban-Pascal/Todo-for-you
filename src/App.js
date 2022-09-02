@@ -8,6 +8,7 @@ import FirstGo from "Components/Pages/FirstGo";
 import CreateNote from "Components/Pages/CreateNote";
 import CreateTodo from "Components/Pages/CreateTodo";
 import Identification from "Components/Pages/identification";
+import CreateFolder from "Components/Pages/CreateFolder";
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="CreateNote" element={<CreateNote />} />
           <Route path="CreateTodo" element={<CreateTodo />} />
           <Route path="Identification" element={<Identification />} />
+          <Route path="CreateFolder" element={<CreateFolder />} />
         </Routes>
       </Layout>
     </Router>

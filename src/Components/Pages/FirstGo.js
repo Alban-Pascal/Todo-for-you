@@ -6,12 +6,12 @@ import Typography from "@mui/material/Typography";
 
 const images = [
   {
-    url: "/static/images/note.jpg",
+    url: "src/Components/static/images/todo-lists.jpg",
     title: "note",
     width: "50%",
   },
   {
-    url: "/static/images/todo-list.jpg",
+    url: "src/Components/static/images/note.jpg",
     title: "todo list",
     width: "50%",
   },

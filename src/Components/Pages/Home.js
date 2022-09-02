@@ -28,16 +28,16 @@ export default function Home() {
         <Link href="#" underline="hover">
           {"Mes Notes"}
         </Link>
+        <div> </div>
+        <h2>Crée</h2>
         <div>
-          {" "}
-          <h2>Crée</h2>
+          <Link href="#" underline="hover">
+            {"Une Note"}
+          </Link>
+          <Link href="#" underline="hover">
+            {"Un Todo"}
+          </Link>
         </div>
-        <Link href="#" underline="hover">
-          {"Une Note"}
-        </Link>
-        <Link href="#" underline="hover">
-          {"Un Todo"}
-        </Link>
       </Box>
     </div>
   );
