@@ -78,6 +78,12 @@ export default function Header({ islight, handleToggleTheme }) {
         <MenuItem onClick={handleClose}>
           <Link to="/CreateTodo">Create Todo</Link>
         </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/MyTodo">Mes Todo</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/MyNote">Mes Notes</Link>
+        </MenuItem>
       </Menu>
     </Wrapper>
   );

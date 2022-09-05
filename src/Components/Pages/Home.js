@@ -23,18 +23,24 @@ export default function Home() {
         }}
         onClick={preventDefault}
       >
-        <Link href="#" underline="hover">
-          {"Mes Todo"}
-        </Link>
-        <Link href="#" underline="hover">
-          {"Mes Notes"}
-        </Link>
-        <div> </div>
+        <diV>
+          <Link href="#" underline="hover">
+            {"Mes Todo"}
+          </Link>
+        </diV>
+        <div>
+          <Link href="#" underline="hover">
+            {"Mes Notes"}
+          </Link>
+        </div>
+
         <h2>Crée</h2>
         <div>
           <Link href="#" underline="hover">
             {"Une Note"}
           </Link>
+        </div>
+        <div>
           <Link href="#" underline="hover">
             {"Un Todo"}
           </Link>

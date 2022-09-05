@@ -9,6 +9,8 @@ import CreateNote from "Components/Pages/CreateNote";
 import CreateTodo from "Components/Pages/CreateTodo";
 import Identification from "Components/Pages/Myaccount";
 import CreateFolder from "Components/Pages/CreateFolder";
+import MyTodo from "Components/Pages/MyTodo";
+import MyNote from "Components/Pages/CreateNote";
 
 export default function App() {
   return (
@@ -22,6 +24,8 @@ export default function App() {
           <Route path="CreateTodo" element={<CreateTodo />} />
           <Route path="Identification" element={<Identification />} />
           <Route path="CreateFolder" element={<CreateFolder />} />
+          <Route path="MyTodo" element={<MyTodo />} />
+          <Route path="MyNote" element={<MyNote />} />
         </Routes>
       </Layout>
     </Router>

@@ -22,7 +22,7 @@ export default function CreateNote() {
         noValidate
         autoComplete="off"
       >
-        <div>
+        <div className="list-group-item d-flex align-item-items-center">
           <TextField
             id="filled-multiline-flexible"
             label="Titre de la note"
@@ -32,6 +32,8 @@ export default function CreateNote() {
             onChange={handleChange}
             variant="filled"
           />
+        </div>
+        <div className="list-group-item d-flex align-item-items-center">
           <TextField
             id="filled-textarea"
             label="Nom du créateur"
@@ -39,6 +41,8 @@ export default function CreateNote() {
             multiline
             variant="filled"
           />
+        </div>
+        <div className="list-group-item d-flex align-item-items-center">
           <TextField
             id="filled-multiline-static"
             label="Ma Note"
