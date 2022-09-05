@@ -1,12 +1,80 @@
 import styled from "styled-components";
+import * as React from "react";
+import Box from "@mui/material/Box";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import MenuIcon from "@mui/icons-material/Menu";
+import DarkModeIcon from "@mui/icons-material/DarkMode";
+import Menu from "@mui/material/Menu";
+import Button from "@mui/material/Button";
+import MenuItem from "@mui/material/MenuItem";
 
 export default function Header({ islight, handleToggleTheme }) {
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   return (
     <Wrapper>
+      <Box
+        sx={{
+          "& > :not(style)": {
+            m: 1,
+          },
+        }}
+      >
+        <ArrowBackIcon />
+      </Box>
+
       <h1>Todo for you</h1>
-      <button onClick={handleToggleTheme}>
+
+      <Button
+        startIcon={<DarkModeIcon />}
+        variant="outlined"
+        onClick={handleToggleTheme}
+      >
         Switch to {islight ? "dark" : "light"} theme
-      </button>
+      </Button>
+
+      <Box
+        sx={{
+          "& > :not(style)": {
+            m: 1,
+          },
+        }}
+      ></Box>
+      <MenuIcon
+        id="basic-button"
+        aria-controls={open ? "basic-menu" : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? "true" : undefined}
+        onClick={handleClick}
+      >
+        Menu
+      </MenuIcon>
+      <Menu
+        id="basic-menu"
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          "aria-labelledby": "basic-button",
+        }}
+      >
+        <MenuItem link="Components/Pages/Home" onClick={handleClose}>
+          Home
+        </MenuItem>
+        <MenuItem
+          onClick={handleClose}
+          url="src\Components\Pages\identification.js"
+        >
+          My account
+        </MenuItem>
+        <MenuItem onClick={handleClose}>Logout</MenuItem>
+      </Menu>
     </Wrapper>
   );
 }
