@@ -1,15 +1,16 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
+import ListAltIcon from "@mui/icons-material/ListAlt";
 
 const preventDefault = (event) => event.preventDefault();
 
 export default function Home() {
   return (
     <div>
-      <h1> Content de vous revoir</h1>
+      <h1> Que fessons nous ?</h1>
 
-      <h2>Consulter </h2>
+      <h2>Consulter: </h2>
       <Box
         sx={{
           display: "flex",

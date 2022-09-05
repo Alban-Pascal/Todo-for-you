@@ -7,7 +7,7 @@ import Layout from "Components/UI/Layout";
 import FirstGo from "Components/Pages/FirstGo";
 import CreateNote from "Components/Pages/CreateNote";
 import CreateTodo from "Components/Pages/CreateTodo";
-import Identification from "Components/Pages/identification";
+import Identification from "Components/Pages/Myaccount";
 import CreateFolder from "Components/Pages/CreateFolder";
 
 export default function App() {

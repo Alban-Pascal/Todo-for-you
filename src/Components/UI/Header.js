@@ -7,6 +7,7 @@ import DarkModeIcon from "@mui/icons-material/DarkMode";
 import Menu from "@mui/material/Menu";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
+import { Link } from "react-router-dom";
 
 export default function Header({ islight, handleToggleTheme }) {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -14,6 +15,7 @@ export default function Header({ islight, handleToggleTheme }) {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -64,16 +66,18 @@ export default function Header({ islight, handleToggleTheme }) {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem link="Components/Pages/Home" onClick={handleClose}>
-          Home
+        <MenuItem onClick={handleClose}>
+          <Link to="/">Home</Link>
         </MenuItem>
-        <MenuItem
-          onClick={handleClose}
-          url="src\Components\Pages\identification.js"
-        >
-          My account
+        <MenuItem onClick={handleClose}>
+          <Link to="/identification">My account</Link>
         </MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/CreateNote">Create Notes</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/CreateTodo">Create Todo</Link>
+        </MenuItem>
       </Menu>
     </Wrapper>
   );
