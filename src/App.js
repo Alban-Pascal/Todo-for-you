@@ -1,5 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from "react";
 
 import Home from "Components/Pages/Home";
 import About from "Components/Pages/About";
@@ -10,7 +11,7 @@ import CreateTodo from "Components/Pages/CreateTodo";
 import Identification from "Components/Pages/Myaccount";
 import CreateFolder from "Components/Pages/CreateFolder";
 import MyTodo from "Components/Pages/MyTodo";
-import MyNote from "Components/Pages/CreateNote";
+import MyNote from "Components/Pages/MyNote";
 
 export default function App() {
   return (
