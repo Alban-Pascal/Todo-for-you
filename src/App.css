@@ -43,6 +43,7 @@ table {
 }
 
 h1 {
+	text-align: center;
 	font-weight: bold;
 	height: max-content;
 	font-size: xx-large;
@@ -53,6 +54,7 @@ h2 {
 	height: max-content;
 	 font-size: x-large;
 	padding: 6%;
+	text-align: center;
 }
 a:link {
 	color: rgb(95, 117, 94);
@@ -65,3 +67,20 @@ a:link {
   Grid {
 	padding: 6%;
   }
+
+  .card {
+border: 1px;
+background-color: aliceblue;
+box-shadow: 10px 5px 5px black ;
+  }
+
+h3 {
+	font-weight: bold;
+	font-size: large;
+}
+
+.Avatar {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}

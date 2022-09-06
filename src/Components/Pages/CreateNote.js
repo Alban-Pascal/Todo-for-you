@@ -14,58 +14,62 @@ export default function CreateNote() {
   return (
     <div>
       <h1>Crée une Note</h1>
-      <Box
-        component="form"
-        sx={{
-          "& .MuiTextField-root": { m: 1, width: "25ch" },
-        }}
-        noValidate
-        autoComplete="off"
-      >
-        <div className="list-group-item d-flex align-item-items-center">
-          <TextField
-            id="filled-multiline-flexible"
-            label="Titre de la note"
-            multiline
-            maxRows={4}
-            value={value}
-            onChange={handleChange}
-            variant="filled"
-          />
-        </div>
-        <div className="list-group-item d-flex align-item-items-center">
-          <TextField
-            id="filled-textarea"
-            label="Nom du créateur"
-            placeholder="Placeholder"
-            multiline
-            variant="filled"
-          />
-        </div>
-        <div className="list-group-item d-flex align-item-items-center">
-          <TextField
-            id="filled-multiline-static"
-            label="Ma Note"
-            multiline
-            rows={4}
-            variant="filled"
-          />
-        </div>
-      </Box>
-      <Box
-        sx={{
-          "& > legend": { mt: 2 },
-        }}
-      >
-        <Typography component="legend">Evaluation</Typography>
-        <Rating
-          name="simple-controlled"
-          value={value}
-          onChange={(event, newValue) => {
-            setValue(newValue);
+      <div className="card">
+        <Box
+          component="form"
+          sx={{
+            "& .MuiTextField-root": { m: 1, width: "25ch" },
           }}
-        />
-      </Box>
+          noValidate
+          autoComplete="off"
+        >
+          <div className="list-group-item d-flex align-item-items-center">
+            <TextField
+              id="filled-multiline-flexible"
+              label="Titre de la note"
+              multiline
+              maxRows={4}
+              value={value}
+              onChange={handleChange}
+              variant="filled"
+            />
+          </div>
+          <div className="list-group-item d-flex align-item-items-center">
+            <TextField
+              id="filled-textarea"
+              label="Nom du créateur"
+              placeholder="Placeholder"
+              multiline
+              variant="filled"
+            />
+          </div>
+          <div className="list-group-item d-flex align-item-items-center">
+            <TextField
+              id="filled-multiline-static"
+              label="Ma Note"
+              multiline
+              rows={4}
+              variant="filled"
+            />
+          </div>
+        </Box>
+        <Box
+          sx={{
+            "& > legend": { mt: 2 },
+          }}
+        >
+          <Typography component="legend" color="black">
+            Evaluation
+          </Typography>
+          <Rating
+            name="simple-controlled"
+            value={value}
+            onChange={(event, newValue) => {
+              setValue(newValue);
+            }}
+          />
+        </Box>
+      </div>
     </div>
   );
 }

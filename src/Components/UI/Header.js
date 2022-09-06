@@ -3,9 +3,9 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import MenuIcon from "@mui/icons-material/Menu";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
+
 import Menu from "@mui/material/Menu";
-import Button from "@mui/material/Button";
+
 import MenuItem from "@mui/material/MenuItem";
 import { Link } from "react-router-dom";
 
@@ -32,14 +32,6 @@ export default function Header({ islight, handleToggleTheme }) {
       </Box>
 
       <h1>Todo for you</h1>
-
-      <Button
-        startIcon={<DarkModeIcon />}
-        variant="outlined"
-        onClick={handleToggleTheme}
-      >
-        Switch to {islight ? "dark" : "light"} theme
-      </Button>
 
       <Box
         sx={{
@@ -83,6 +75,9 @@ export default function Header({ islight, handleToggleTheme }) {
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <Link to="/MyNote">Mes Notes</Link>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <Link to="/presentation">presentation</Link>
         </MenuItem>
       </Menu>
     </Wrapper>

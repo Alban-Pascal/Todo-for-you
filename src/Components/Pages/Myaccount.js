@@ -6,10 +6,14 @@ import Stack from "@mui/material/Stack";
 
 export default function Identification() {
   return (
-    <div>
+    <div className="card">
       <h2>Mon Compte</h2>
       <Stack direction="row">
-        <Avatar alt="Cindy Baker" src="/static/static/images/avatar/1.jpg" />
+        <Avatar
+          className="Avatar"
+          alt="Cindy Baker"
+          src="https://www.univie.fr/wp-content/uploads/2017/03/anastassia-499-p.jpg"
+        />
       </Stack>
       <p>
         <TextField id="outlined-basic" label="Name" variant="filled" />
@@ -27,7 +31,7 @@ export default function Identification() {
       <p>
         <TextField
           id="standard-basic"
-          label="repeat Passwords"
+          label="repeat Password"
           variant="filled"
         />
       </p>

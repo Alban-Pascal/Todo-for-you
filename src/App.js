@@ -12,6 +12,8 @@ import Identification from "Components/Pages/Myaccount";
 import CreateFolder from "Components/Pages/CreateFolder";
 import MyTodo from "Components/Pages/MyTodo";
 import MyNote from "Components/Pages/MyNote";
+import Presentation from "Components/Pages/Presentation";
+import Note from "Components/Pages/Note";
 
 export default function App() {
   return (
@@ -27,6 +29,8 @@ export default function App() {
           <Route path="CreateFolder" element={<CreateFolder />} />
           <Route path="MyTodo" element={<MyTodo />} />
           <Route path="MyNote" element={<MyNote />} />
+          <Route path="Presentation" element={<Presentation />} />
+          <Route path="Note" element={<Note />} />
         </Routes>
       </Layout>
     </Router>

@@ -21,9 +21,9 @@ export default function Layout({ children }) {
       <wrapper>
         <GlobalStyle />
 
-        <Header islight={islight} handleToggleTheme={handleToggleTheme} />
+        <Header />
         <Main>{children}</Main>
-        <Footer />
+        <Footer islight={islight} handleToggleTheme={handleToggleTheme} />
       </wrapper>
     </ThemeProvider>
   );
