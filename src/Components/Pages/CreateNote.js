@@ -74,9 +74,11 @@ export default function CreateNote() {
           </Box>
         </div>
       </div>
-      <Button variant="contained" endIcon={<BeenhereIcon />}>
-        validation
-      </Button>
+      <div className="validation">
+        <Button variant="contained" endIcon={<BeenhereIcon />}>
+          validation
+        </Button>
+      </div>
     </div>
   );
 }

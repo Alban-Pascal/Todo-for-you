@@ -44,9 +44,11 @@ export default function Registration() {
           />
         </p>
       </div>
-      <Button variant="contained" endIcon={<BeenhereIcon />}>
-        validation
-      </Button>
+      <div className="validation">
+        <Button variant="contained" endIcon={<BeenhereIcon />}>
+          validation
+        </Button>
+      </div>
     </div>
   );
 }

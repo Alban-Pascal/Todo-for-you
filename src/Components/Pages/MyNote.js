@@ -3,6 +3,7 @@ import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
 import DeleteIcon from "@mui/icons-material/Delete";
 import Link from "@mui/material/Link";
+import CheckIcon from "@mui/icons-material/Check";
 
 export default function MyNote() {
   return (
@@ -15,6 +16,7 @@ export default function MyNote() {
             <IconButton aria-label="delete">
               <DeleteIcon />
             </IconButton>
+            <CheckIcon />
           </li>
         </Stack>
         <Stack>
@@ -23,6 +25,7 @@ export default function MyNote() {
             <IconButton aria-label="delete">
               <DeleteIcon />
             </IconButton>
+            <CheckIcon />
           </li>
         </Stack>
         <Stack>
@@ -31,6 +34,7 @@ export default function MyNote() {
             <IconButton aria-label="delete">
               <DeleteIcon />
             </IconButton>
+            <CheckIcon />
           </li>
         </Stack>
         <Stack>
@@ -39,6 +43,7 @@ export default function MyNote() {
             <IconButton aria-label="delete">
               <DeleteIcon />
             </IconButton>
+            <CheckIcon />
           </li>
         </Stack>
       </ul>

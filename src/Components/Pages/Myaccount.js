@@ -10,7 +10,7 @@ export default function Identification() {
     <div>
       <div className="card">
         <h2>Mon Compte</h2>
-        <Stack direction="row">
+        <Stack>
           <Avatar
             className="Avatar"
             alt="Cindy Baker"
@@ -72,9 +72,11 @@ export default function Identification() {
           </Button>
         </Stack>
       </div>
-      <Button variant="contained" endIcon={<BeenhereIcon />}>
-        validation
-      </Button>
+      <div className="validation">
+        <Button variant="contained" endIcon={<BeenhereIcon />}>
+          validation
+        </Button>
+      </div>
     </div>
   );
 }

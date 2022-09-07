@@ -43,17 +43,18 @@ table {
 }
 
 h1 {
-	text-align: center;
+	text-align: auto;
 	font-weight: bold;
 	height: max-content;
-	font-size: 4rem;
+	font-size: 5rem;
 	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 h2 {
 	font-weight: bold;
 	height: max-content;
-	font-size: x-large;
+	font-size: 2rem;
 	padding: 6%;
 	text-align: center;
 }
@@ -74,7 +75,7 @@ border: 1px;
 background-color: rgb(229, 240, 250);
 box-shadow: 10px 5px 5px  rgb(97, 95, 95) ;
 border-radius: 10px;
-width:150%;
+width:100%;
 align-items: center;
 margin-left: 12%;
 margin-right: 12%;
@@ -103,4 +104,12 @@ p, h1, h2, h3, li {
 
 li {
 	border: 1px solid;
+}
+
+.validation {
+  margin-top: 2rem;
+  margin-left: 50%;
+}
+.center {
+	text-align: center;
 }

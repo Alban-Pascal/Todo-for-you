@@ -12,44 +12,48 @@ export default function Home() {
     <div>
       <h1> Que fessons nous ?</h1>
       <h2>Consulter: </h2>
-
-      <Grid item xs={18}>
-        <Typography>
-          {"Mes Todo"}
-          <Link to="/MyTodo">
-            <ListAltIcon sx={{ fontSize: 60 }} />
-          </Link>
-        </Typography>
-      </Grid>
-
-      <Grid item xs={18}>
-        <Typography>
-          {"Mes Notes"}
-          <Link to="/MyNote">
-            <NoteAltIcon sx={{ fontSize: 60 }} />
-          </Link>
-        </Typography>
-      </Grid>
+      <div className="center">
+        <Grid item xs={18}>
+          <Typography>
+            {"Mes Todo"}
+            <Link to="/MyTodo">
+              <ListAltIcon sx={{ fontSize: 60 }} />
+            </Link>
+          </Typography>
+        </Grid>
+      </div>
+      <div className="center">
+        <Grid item xs={18}>
+          <Typography>
+            {"Mes Notes"}
+            <Link to="/MyNote">
+              <NoteAltIcon sx={{ fontSize: 60 }} />
+            </Link>
+          </Typography>
+        </Grid>
+      </div>
 
       <h2> Crée :</h2>
-
-      <Grid item xs={18}>
-        <Typography>
-          {"Un Todo"}
-          <Link to="/CreateTodo">
-            <CreateIcon sx={{ fontSize: 60 }} />
-          </Link>
-        </Typography>
-      </Grid>
-
-      <Grid item xs={18}>
-        <Typography>
-          {" Une Note"}
-          <Link to="/CreateNote">
-            <BorderColorIcon sx={{ fontSize: 60 }} label="Call me" />
-          </Link>
-        </Typography>
-      </Grid>
+      <div className="center">
+        <Grid item xs={18}>
+          <Typography>
+            {"Un Todo"}
+            <Link to="/CreateTodo">
+              <CreateIcon sx={{ fontSize: 60 }} />
+            </Link>
+          </Typography>
+        </Grid>
+      </div>
+      <div className="center">
+        <Grid item xs={18}>
+          <Typography>
+            {" Une Note"}
+            <Link to="/CreateNote">
+              <BorderColorIcon sx={{ fontSize: 60 }} label="Call me" />
+            </Link>
+          </Typography>
+        </Grid>
+      </div>
     </div>
   );
 }
