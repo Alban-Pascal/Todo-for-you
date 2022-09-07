@@ -3,6 +3,8 @@ import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
 import Typography from "@mui/material/Typography";
+import BeenhereIcon from "@mui/icons-material/Beenhere";
+import Button from "@mui/material/Button";
 
 export default function CreateNote() {
   const [value, setValue] = React.useState();
@@ -18,12 +20,12 @@ export default function CreateNote() {
         <Box
           component="form"
           sx={{
-            "& .MuiTextField-root": { m: 1, width: "25ch" },
+            "& .MuiTextField-root": { m: 1, width: "100%" },
           }}
           noValidate
           autoComplete="off"
         >
-          <div className="list-group-item d-flex align-item-items-center">
+          <div>
             <TextField
               id="filled-multiline-flexible"
               label="Titre de la note"
@@ -34,7 +36,7 @@ export default function CreateNote() {
               variant="filled"
             />
           </div>
-          <div className="list-group-item d-flex align-item-items-center">
+          <div>
             <TextField
               id="filled-textarea"
               label="Nom du créateur"
@@ -43,7 +45,7 @@ export default function CreateNote() {
               variant="filled"
             />
           </div>
-          <div className="list-group-item d-flex align-item-items-center">
+          <div>
             <TextField
               id="filled-multiline-static"
               label="Ma Note"
@@ -70,6 +72,9 @@ export default function CreateNote() {
           />
         </Box>
       </div>
+      <Button variant="contained" endIcon={<BeenhereIcon />}>
+        validation
+      </Button>
     </div>
   );
 }

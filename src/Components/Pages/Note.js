@@ -10,6 +10,7 @@ import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
 import SendIcon from "@mui/icons-material/Send";
 import Stack from "@mui/material/Stack";
+import Link from "@mui/material/Link";
 
 export default function Todo(props) {
   const { loading = false } = props;
@@ -90,7 +91,7 @@ export default function Todo(props) {
           Delete
         </Button>
         <Button variant="contained" endIcon={<SendIcon />}>
-          Checked in
+          <Link href="/MyNote"> Checked in </Link>
         </Button>
       </Stack>
     </div>

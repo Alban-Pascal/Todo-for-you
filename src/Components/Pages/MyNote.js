@@ -1,34 +1,46 @@
 import * as React from "react";
+import IconButton from "@mui/material/IconButton";
+import Stack from "@mui/material/Stack";
+import DeleteIcon from "@mui/icons-material/Delete";
+import Link from "@mui/material/Link";
 
-export default function MyTodo() {
+export default function MyNote() {
   return (
-    <section id="todo">
-      <h1 className="m-3">Liste des Notes</h1>
-      <ul className="list-group">
-        <li className="list-group-item d-flex align-item-items-center">
-          Note 1
-          <button className="btn btn-sm ml-auto btn-outline-success">
-            &#x2713;
-          </button>
-        </li>
-        <li className="list-group-item d-flex align-item-items-center">
-          Note 2
-          <button className="btn btn-sm ml-auto btn-outline-success">
-            &#x2713;
-          </button>
-        </li>
-        <li className="list-group-item d-flex align-item-items-center">
-          Note 3
-          <button className="btn btn-sm ml-auto btn-outline-success">
-            &#x2713;
-          </button>
-        </li>
-        <li className="list-group-item d-flex align-item-items-center">
-          Note 4
-          <button className="btn btn-sm ml-auto btn-outline-success">
-            &#x2713;
-          </button>
-        </li>
+    <section className="card">
+      <h1>Liste des Notes</h1>
+      <ul>
+        <Stack>
+          <li>
+            <Link href="/Note">Note 1</Link>
+            <IconButton aria-label="delete">
+              <DeleteIcon />
+            </IconButton>
+          </li>
+        </Stack>
+        <Stack>
+          <li>
+            Note 2
+            <IconButton aria-label="delete">
+              <DeleteIcon />
+            </IconButton>
+          </li>
+        </Stack>
+        <Stack>
+          <li>
+            Note 3
+            <IconButton aria-label="delete">
+              <DeleteIcon />
+            </IconButton>
+          </li>
+        </Stack>
+        <Stack>
+          <li>
+            Note 4
+            <IconButton aria-label="delete">
+              <DeleteIcon />
+            </IconButton>
+          </li>
+        </Stack>
       </ul>
     </section>
   );

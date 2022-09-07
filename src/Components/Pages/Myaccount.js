@@ -12,32 +12,68 @@ export default function Identification() {
         <Avatar
           className="Avatar"
           alt="Cindy Baker"
+          sx={{ width: 90, height: 90 }}
           src="https://www.univie.fr/wp-content/uploads/2017/03/anastassia-499-p.jpg"
         />
       </Stack>
       <p>
-        <TextField id="outlined-basic" label="Name" variant="filled" />
-      </p>
-      <p>
-        <TextField id="filled-basic" label="first name" variant="filled" />
-      </p>
-      <p>
-        <TextField id="filled-basic" label="email" variant="filled" />
-      </p>
-      <h3>Changer mon mots de passe</h3>
-      <p>
-        <TextField id="standard-basic" label="Passwords" variant="filled" />
+        <TextField
+          fullWidth
+          id="outlined-basic"
+          label="Name"
+          variant="filled"
+          margin="none"
+        />
       </p>
       <p>
         <TextField
+          fullWidth
+          id="filled-basic"
+          label="first name"
+          variant="filled"
+          margin="none"
+        />
+      </p>
+      <p>
+        <TextField
+          fullWidth
+          id="filled-basic"
+          label="email"
+          variant="filled"
+          margin="none"
+        />
+      </p>
+      <h3>Changer mon mots de passe</h3>
+      <p>
+        <TextField
+          fullWidth
+          id="standard-basic"
+          label="Passwords"
+          variant="filled"
+          margin="none"
+        />
+      </p>
+      <p>
+        <TextField
+          fullWidth
           id="standard-basic"
           label="repeat Password"
           variant="filled"
+          margin="none"
         />
       </p>
       <h3>Changer mon avatar</h3>
-
-      <Button variant="contained">validation</Button>
+      <Stack direction="row" alignItems="center" spacing={2}>
+        <Button color="success" variant="contained" component="label">
+          Upload my picture
+          <input hidden accept="image/*" multiple type="file" />
+        </Button>
+      </Stack>
+      <Stack direction="row" alignItems="left" spacing={2} size="small">
+        <Button variant="contained" color="success">
+          validation
+        </Button>
+      </Stack>
     </div>
   );
 }

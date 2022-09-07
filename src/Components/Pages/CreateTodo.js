@@ -6,6 +6,8 @@ import Typography from "@mui/material/Typography";
 import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import BeenhereIcon from "@mui/icons-material/Beenhere";
+import Button from "@mui/material/Button";
 
 export default function CreateTodo() {
   const [value, setValue] = React.useState();
@@ -21,7 +23,7 @@ export default function CreateTodo() {
         <Box
           component="form"
           sx={{
-            "& .MuiTextField-root": { m: 1, width: "25ch" },
+            "& .MuiTextField-root": { m: 1, width: "100%" },
           }}
           noValidate
           autoComplete="off"
@@ -72,6 +74,9 @@ export default function CreateTodo() {
           />
         </Box>
       </div>
+      <Button variant="contained" endIcon={<BeenhereIcon />}>
+        validation
+      </Button>
     </div>
   );
 }
