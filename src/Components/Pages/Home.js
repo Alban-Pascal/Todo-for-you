@@ -11,48 +11,37 @@ export default function Home() {
   return (
     <div>
       <h1> Que fessons nous ?</h1>
-      <h2>Consulter: </h2>
-      <div className="center">
-        <Grid item xs={18}>
-          <Typography>
-            {"Mes Todo"}
+      <div className="card">
+        <h1>Consulter: </h1>
+        <ul>
+          <li className="center">
+            <h2>MesTodo </h2>
             <Link to="/MyTodo">
               <ListAltIcon sx={{ fontSize: 60 }} />
             </Link>
-          </Typography>
-        </Grid>
-      </div>
-      <div className="center">
-        <Grid item xs={18}>
-          <Typography>
-            {"Mes Notes"}
+          </li>
+          <li className="center">
+            <h2>Mes Note </h2>
             <Link to="/MyNote">
               <NoteAltIcon sx={{ fontSize: 60 }} />
             </Link>
-          </Typography>
-        </Grid>
-      </div>
-
-      <h2> Crée :</h2>
-      <div className="center">
-        <Grid item xs={18}>
-          <Typography>
-            {"Un Todo"}
+          </li>
+        </ul>
+        <h1> Crée :</h1>
+        <ul>
+          <li className="center">
+            <h2> Todo </h2>
             <Link to="/CreateTodo">
               <CreateIcon sx={{ fontSize: 60 }} />
             </Link>
-          </Typography>
-        </Grid>
-      </div>
-      <div className="center">
-        <Grid item xs={18}>
-          <Typography>
-            {" Une Note"}
+          </li>
+          <li className="center">
+            <h2>Note</h2>
             <Link to="/CreateNote">
-              <BorderColorIcon sx={{ fontSize: 60 }} label="Call me" />
+              <BorderColorIcon sx={{ fontSize: 60 }} />
             </Link>
-          </Typography>
-        </Grid>
+          </li>
+        </ul>
       </div>
     </div>
   );

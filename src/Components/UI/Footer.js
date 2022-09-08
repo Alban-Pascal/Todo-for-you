@@ -23,6 +23,7 @@ export default function Footer({ islight, handleToggleTheme }) {
           },
         }}
       ></Box>
+
       <button onClick={handleToggleTheme}>
         <Button
           size="small"

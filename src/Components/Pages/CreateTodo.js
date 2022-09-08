@@ -41,7 +41,7 @@ export default function CreateTodo() {
           </div>
           <div>
             <h2>A faire dans :</h2>
-            <FormGroup>
+            <FormGroup className="deadline">
               <FormControlLabel
                 control={<Checkbox defaultChecked />}
                 label=" the day"
