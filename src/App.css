@@ -43,14 +43,14 @@ table {
 }
 
 h1 {
-
 	text-align: auto;
 	font-weight: bold;
 	height: max-content;
 	font-size: 5rem;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
-}
+  }
+
 
 h2 {
 	font-weight: bold;
@@ -58,6 +58,7 @@ h2 {
 	font-size: 2rem;
 	padding: 6%;
 	text-align: center;
+
 }
 a:link {
 	color: rgb(0, 0, 0);
@@ -79,7 +80,7 @@ align-items: center;
 margin-left: 12%;
 margin-right: 12%;
 background-image: url(../src/Components/static/images/todo-lists.jpg) ;
-  }
+}
 
 h3 {
 	font-weight: bold;
@@ -99,6 +100,8 @@ p, h1, h2, h3, li {
 	border-radius: 10px;
 	color: black;
 	align-items: center;
+	padding: 0;
+
 }
 
 
@@ -110,10 +113,13 @@ p, h1, h2, h3, li {
 }
 .center {
 	text-align: center;
-	margin: 0.2rem;
 }
 
 .deadline {
 	color: black;
 	padding-left: 6px;
+}
+
+li, h2, p {
+	background-color: azure
 }
