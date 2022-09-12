@@ -5,7 +5,7 @@ import Avatar from "@mui/material/Avatar";
 import Stack from "@mui/material/Stack";
 import BeenhereIcon from "@mui/icons-material/Beenhere";
 
-export default function Identification() {
+export default function MyAccount() {
   return (
     <div>
       <div className="card">
@@ -72,6 +72,7 @@ export default function Identification() {
           </Button>
         </Stack>
       </div>
+
       <div className="validation">
         <Button variant="contained" endIcon={<BeenhereIcon />}>
           validation

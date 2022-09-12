@@ -3,7 +3,6 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import MenuIcon from "@mui/icons-material/Menu";
-import useMediaQuery from "@mui/material/useMediaQuery";
 
 import Menu from "@mui/material/Menu";
 
@@ -32,9 +31,7 @@ export default function Header({ islight, handleToggleTheme }) {
       >
         <ArrowBackIcon />
       </Box>
-
       <h1>Todo for you</h1>
-
       <Box
         sx={{
           "& > :not(style)": {
@@ -64,7 +61,7 @@ export default function Header({ islight, handleToggleTheme }) {
           <Link to="/">Home</Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link to="/identification">My account</Link>
+          <Link to="/Myaccount">My account</Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <Link to="/CreateNote">Create Notes</Link>
