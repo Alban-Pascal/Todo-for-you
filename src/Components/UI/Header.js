@@ -64,12 +64,6 @@ export default function Header({ islight, handleToggleTheme }) {
           <Link to="/Myaccount">My account</Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <Link to="/CreateNote">Create Notes</Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
-          <Link to="/CreateTodo">Create Todo</Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>
           <Link to="/MyTodo">Mes Todo</Link>
         </MenuItem>
         <MenuItem onClick={handleClose}>
