@@ -13,7 +13,6 @@ import MyNote from "Components/Pages/MyNote";
 import Presentation from "Components/Pages/Presentation";
 import Note from "Components/Pages/Note";
 import Registration from "Components/Pages/Registration";
-import { Store } from "@mui/icons-material";
 
 export default function App() {
   return (

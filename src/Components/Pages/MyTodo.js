@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
-import store from "Components/store/store";
+import store from "Components/store/Reducer";
 import styled from "styled-components";
-
+import Stack from "@mui/material/Stack";
+import DeleteIcon from "@mui/icons-material/Delete";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
+import Button from "@mui/material/Button";
 
 const theme = createTheme();
 theme.typography.h1 = {
@@ -14,43 +16,21 @@ theme.typography.h1 = {
 };
 
 const Todo = () => {
-  /**
-   * Defining two local states to store
-   * - The newTodo text (from input)
-   * - The list of todos coming from the store
-   */
   const [newTodo, setNewTodo] = useState("");
   const [todos, setTodos] = useState([]);
 
-  /**
-   * At component mounting, subscribe to the store
-   * then call the syncStore() method
-   */
   useEffect(() => {
     store.subscribe(() => syncStore());
   }, []);
 
-  /**
-   * Set local todos state with global state coming from the store
-   */
   const syncStore = () => {
     setTodos(store.getState());
   };
 
-  /**
-   * Set local newTodo state with current input value
-   * @param {Object} event
-   */
   const handleChange = (event) => {
     setNewTodo(event.target.value);
   };
 
-  /**
-   * Handle the "create todo" button
-   * reset the input value then
-   * dispatch ADD_TODO action with the new todo as it's payload
-   * @param {Object} event
-   */
   const handleCreate = (event) => {
     setNewTodo("");
     store.dispatch({
@@ -63,12 +43,6 @@ const Todo = () => {
     });
   };
 
-  /**
-   * Handle the "done" button click
-   * dispatch the SET_DONE action that will toggle the "done"
-   * property on the todo whose "done" button is being clicked
-   * @param {number} id
-   */
   const handleDone = (id) => {
     store.dispatch({
       type: "SET_DONE",
@@ -76,12 +50,17 @@ const Todo = () => {
     });
   };
 
-  /**
-   * Handle the "reset todos" button
-   * dispatch the RESET_TODOS action that will empty the global state
-   */
   const handleReset = () => {
-    store.dispatch({ type: "RESET_TODOS" });
+    store.dispatch({
+      type: "RESET_TODOS",
+    });
+  };
+
+  const deleteTodo = (id) => {
+    store.dispatch({
+      type: "DELETE_TODO",
+      payload: id,
+    });
   };
 
   return (
@@ -92,19 +71,27 @@ const Todo = () => {
 
       <NewTodo>
         <Input type="text" value={newTodo} onChange={handleChange} />
-        <Button onClick={handleCreate}>Créer le todo</Button>
+        <Buttons onClick={handleCreate}>Créer le todo</Buttons>
       </NewTodo>
 
       <ul>
         {todos.map((todo) => (
           <TodoItem key={todo.id} todo={todo}>
             {todo.content}
-            <Button onClick={() => handleDone(todo.id)}>Fait</Button>
+            <Buttons onClick={() => handleDone(todo.id)}>Fait</Buttons>
+            <Stack direction="row" spacing={2}>
+              <Button
+                variant="outlined"
+                startIcon={<DeleteIcon />}
+                onClick={() => deleteTodo(todo.id)}
+              >
+                Delete
+              </Button>
+            </Stack>
           </TodoItem>
         ))}
       </ul>
-
-      <ResetButton onClick={handleReset}>Réinitialiser les TODO</ResetButton>
+      <ResetButtons onClick={handleReset}>Réinitialiser les TODO</ResetButtons>
     </section>
   );
 };
@@ -127,7 +114,7 @@ const Input = styled.input`
   flex: 1;
 `;
 
-const Button = styled.button`
+const Buttons = styled.button`
   height: 40px;
   border: 0;
   background: #25be58;
@@ -139,7 +126,7 @@ const Button = styled.button`
   margin-left: 1rem;
 `;
 
-const ResetButton = styled(Button)`
+const ResetButtons = styled(Buttons)`
   background: #3d3d3d;
   margin: 2rem 0;
 `;
